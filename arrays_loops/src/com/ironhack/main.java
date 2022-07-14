@@ -3,9 +3,10 @@ package com.ironhack;
 import java.util.ArrayList;
 
 public class main {
+
     public static void main(String[] args) {  //si pones main te sale la opcion de que te pinte el methodo main
         int[] numbers = {0, 1, 2, 3, 4};
-
+       new loop();
         //tamaño del array es fijo, no puede haber mas elementos que los declarados, si menos si no se ponen
         // solo se puede usar un tipo de dato en el array, no varios.
         //para saber el tamaño es un atributo del array no un metodo, como aqui abajo hago
@@ -91,6 +92,8 @@ public class main {
             }
             //AInicial[x] =
         }
+
+        // FOR EACH
 
         for(int numero : ANuevo){
             System.out.println(numero);

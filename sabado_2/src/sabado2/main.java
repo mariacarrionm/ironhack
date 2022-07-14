@@ -1,5 +1,8 @@
 package sabado2;
 
+import java.io.FileWriter;
+import java.util.Scanner;
+
 public class main {
 
 
@@ -29,21 +32,73 @@ public class main {
      rd Delete directory.
      del Delete file.**/
 
-    /** Git Commands
-     *
-     *
-     init Create staging (on RAM) and a local repository (.git folder)
-     add Add untracked files to staging
-     rm Remove files from staging
-     status Show files changes
-     commit Adds changes from staging to the repo versioning
-     push Upload commits to a remote branch
-     checkout get a branch
-     branch create a branch
-     pull download commits from remote branch
-     clone clones a repo
-     remote add origin add a remote repo
-*+/
+    /**
+     * Git Commands
+     * <p>
+     * <p>
+     * init Create staging (on RAM) and a local repository (.git folder)
+     * add Add untracked files to staging
+     * rm Remove files from staging
+     * status Show files changes
+     * commit Adds changes from staging to the repo versioning
+     * push Upload commits to a remote branch
+     * checkout get a branch
+     * branch create a branch
+     * pull download commits from remote branch
+     * clone clones a repo
+     * remote add origin add a remote repo
+     **/
+
+    public static void main(String[] args) {
+        /**     Scanner scanner = new Scanner(System.in); // inicializamos la clase que nos permite meter datos por consola
+
+         System.out.println("please introduce tu nombre");
+         String name = scanner.nextLine();
+         System.out.println("Hello " + name);
+
+         System.out.println("how old are you?");
+         int age = scanner.nextInt();
+
+         while (age < 0 || age > 130) {
+         System.err.println("No es valida la edad. Vuelve a insertala");
+         age = scanner.nextInt();
+         }
+         if (age >= 18) {
+         System.out.println("welcome");
+         } else {
+         System.out.println("sorry no puedes acceder");
+         }
+         **/
+        /** Create a program that reads from standard input a string and prints the count of the words that starts with
+         a vowel. Skipping all the words how doesn't start with a vowel and print it as an error. **/
+
+        Scanner scanner = new Scanner(System.in);
+
+
+        System.out.println("introduce la frase que quieras");
+        String frase = scanner.nextLine();
+
+        String[] arraySentence = frase.split(" ");
+        int contar = 0;
+        //EMPEZAMOS UN BUCLE FOR EACH, SE VE que es for each CON LOS ":" que se usan. VAMOS A RECORRER UN lista de STRINGS, por eso empezamos por string.
+        // Le damos un nombre que queramos para llamar asi a cada string que vamos a recorrer del array
+        // y ponemos ":" y el array que vamos a recorrer
+        for (String palabra : arraySentence) {
+            if (palabra.startsWith("a")
+                    || palabra.startsWith("e")
+                    || palabra.startsWith("i")
+                    || palabra.startsWith("o")
+                    || palabra.startsWith("u")){
+             contar = contar + 1;
+            } else {
+                System.err.println("es un error");
+                //System.err.println(palabra);
+            }
+        }
+        System.out.println(contar);
+    }
+
+
 
 
 
